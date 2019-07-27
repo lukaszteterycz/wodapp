@@ -60,6 +60,9 @@ body {
 .button-wrap {
   display: flex;
   flex-direction: column;
+  &__alert {
+    color:#fff;
+  }
 }
 
 .button-glass {
