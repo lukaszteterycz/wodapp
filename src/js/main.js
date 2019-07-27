@@ -22,9 +22,13 @@ const glassRemove = document.querySelector('.button-glass--remove--js');
 const waterAlert = document.querySelector('.button-wrap__alert--js');
 let number = 0;
 
+const key = new Date().toISOString().slice(0, 10)
+
 glassAdd.addEventListener('click', (e) => {
   if (number < 11) {
-    numberGlass.innerHTML = number++;
+    number++;
+    numberGlass.innerHTML = number;
+    localStorage.setItem(key, numberGlass.innerHTML);
   }
   else {
     waterAlert.innerHTML = 'za dużo';
@@ -35,13 +39,24 @@ glassAdd.addEventListener('click', (e) => {
 
 glassRemove.addEventListener('click', (e) => {
   if (number > 0) {
-    numberGlass.innerHTML = number--;
+    number--;
+    numberGlass.innerHTML = number;
+    localStorage.setItem(key, numberGlass.innerHTML);
   }
   else {
     waterAlert.innerHTML = 'mniej się nie da!';
   }
 }
 );
+
+console.log(localStorage.getItem(key));
+
+if (localStorage.getItem(key) == undefined) {
+  numberGlass.innerHTML = 'brak';
+}
+
+
+
 
 
 
