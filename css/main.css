@@ -386,6 +386,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .button-wrap__alert {
+    color: #fff; }
 
 .button-glass {
   padding: 12px 48px;
