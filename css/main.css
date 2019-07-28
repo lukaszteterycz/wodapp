@@ -348,6 +348,9 @@ body {
   background: #3767AD;
   font-family: 'Baloo Bhaijaan', cursive; }
 
+h2 {
+  margin: 6px 0; }
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,7 +388,8 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  height: 120px; }
   .button-wrap__alert {
     color: #fff; }
 
@@ -408,5 +412,13 @@ body {
           transform-origin: 50%;
   -webkit-animation: wave 15s ease-in-out infinite;
           animation: wave 15s ease-in-out infinite; }
+
+.list {
+  color: #fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .list__item {
+    padding-bottom: 5px; }
 
 /*# sourceMappingURL=main.css.map */
