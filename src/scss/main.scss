@@ -32,6 +32,10 @@ body {
   font-family: 'Baloo Bhaijaan', cursive;
 }
 
+h2 {
+  margin: 6px 0;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -60,6 +64,7 @@ body {
 .button-wrap {
   display: flex;
   flex-direction: column;
+  height: 120px;
   &__alert {
     color:#fff;
   }
@@ -84,4 +89,15 @@ body {
   transform: scale(1);
   transform-origin: 50%;
   animation: wave 15s ease-in-out infinite;
+}
+
+.list {
+  color:#fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  // text-align: center;
+  &__item {
+    padding-bottom:5px;
+  }
 }

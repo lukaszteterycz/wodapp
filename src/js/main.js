@@ -22,7 +22,9 @@ const glassRemove = document.querySelector('.button-glass--remove--js');
 const waterAlert = document.querySelector('.button-wrap__alert--js');
 let number = 0;
 
-const date = new Date().toISOString().slice(0, 10)
+const date = new Date().toISOString().slice(0, 10);
+
+const list = document.querySelector('.list--js');
 
 glassAdd.addEventListener('click', (e) => {
   if (number < 11) {
@@ -59,6 +61,17 @@ if (localStorage.getItem(date).length > 0) {
   numberGlass.innerHTML = localStorage.getItem(date);
 }
 
+for (var i = 0; i < localStorage.length; i++) {
 
+  // set iteration key name
+  var key = localStorage.key(i);
+
+  // use key name to retrieve the corresponding value
+  var value = localStorage.getItem(key);
+
+  // console.log the iteration key and value
+  console.log('Key: ' + key + ', Value: ' + value);
+  list.innerHTML += `<li class="list__item"> ${key}<br> liczba szklanek: ${value}</li>`;
+}
 
 
